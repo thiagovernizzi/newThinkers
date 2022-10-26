@@ -1,0 +1,265 @@
+<html>
+  <head>
+    <title>Aprendendo tabelas</title>
+    <script type="text/javascript">
+         function validarCampoNome() {
+                if(document.form.CAMPO_NOME.value == '')
+                {
+                    document.getElementById('MENSAGEM_NOME').innerHTML = "Por favor, informe o nome";
+                    return false;
+                }
+                else
+                {
+                    document.getElementById('MENSAGEM_NOME').innerHTML = "";
+                    return true;
+                }
+            }
+        
+        function validarCampoIdade() {
+                if(document.form.CAMPO_IDADE.value == '')
+                {
+                    document.getElementById('MENSAGEM_IDADE').innerHTML = "Por favor, informe a idade";
+                    return false;
+                }
+                else
+                {
+                    document.getElementById('MENSAGEM_IDADE').innerHTML = "";
+                    return true;
+                }
+            }
+        
+        function validarCampoLogin() {
+                if(document.form.CAMPO_LOGIN.value == '')
+                {
+                    document.getElementById('MENSAGEM_LOGIN').innerHTML = "Por favor, informe o login";
+                    return false;
+                }
+                else
+                {
+                    document.getElementById('MENSAGEM_LOGIN').innerHTML = "";
+                    return true;
+                }
+            }
+        
+            function validarCampoSenha() {
+                if(document.form.CAMPO_SENHA.value == '')
+                {
+                    document.getElementById('MENSAGEM_SENHA').innerHTML = "Por favor, informe a senha";
+                    return false;
+                }
+                else
+                {
+                    document.getElementById('MENSAGEM_SENHA').innerHTML = "";
+                    return true;
+                }
+            }
+
+            function validarCampoStatus() {
+                if(document.form.CAMPO_STATUS.value == '')
+                {
+                    document.getElementById('MENSAGEM_STATUS').innerHTML = "Por favor, informe o status";
+                    return false;
+                }
+                else
+                {
+                    document.getElementById('MENSAGEM_STATUS').innerHTML = "";
+                    return true;
+                }
+            }
+
+        function mouseSobreOPrimeiro() {
+            document.getElementById('ultima_linha').className = "fundo_laranja";
+        }
+
+        function mouseSaiuDoPrimeiro() {
+            document.getElementById("ultima_linha").className = "fundo_azul";
+        }
+
+        function mouseSobreOUltimo() {
+            document.getElementById("ultima_linha").className = "fundo_laranja";
+        }
+
+        function mouseSaiuDoUltimo() {
+            document.getElementById("ultima_linha").className = "fundo_azul";
+        }
+    </script>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .input_name {
+            background-color: rgb(108, 173, 238);
+        }
+        .input {
+            background-color: aliceblue;
+        }
+        .mensagem_erro{
+            font-weight: bold;
+            color: rgba(10, 179, 246, 0.918);
+        }
+        .fundo_verde{
+            background-color: rgb(102, 166, 102);
+            font-weight: bold;
+        }
+        .titulos_tabela{
+            background-color:  rgb(187, 216, 200) ;
+        }
+        .maria{
+            background-color: rgb(208, 218, 215);
+        }
+        .roberto{
+            background-color: azure;
+        }
+        .fundo_azul{
+            background-color: rgb(29, 136, 230);
+        }
+        .fundo_amarelo{
+            background-color: rgb(91, 91, 255);
+        }
+        .fundo_laranja{
+            background-color: rgb(233, 188, 104);
+        }
+    </style>
+  </head>
+  <body  style="display: flex; flex-direction: row; justify-content: center">
+    <form
+      name="form"
+    >
+      <table border="1" width="600px" style="text-align: center">
+        <tr>
+          <td id="primeiro" class="fundo_laranja" rowspan="24" onmouseover="mouseSobreOPrimeiro()" onmouseout="mouseSaiuDoPrimeiro()">PRIMEIRO</td>
+          <td class="fundo_verde" colspan="11">CADASTRO DE PESSOAS</td>
+          <td id="ultimo" class="fundo_laranja" rowspan="24" onmouseover="mouseSobreOUltimo()" onmouseout="mouseSaiuDoUltimo()">ÚLTIMO</td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td class="input_name">NOME</td>
+          <td  class="input" colspan="9">
+            <input type="text" name="CAMPO_NOME" onblur="validarCampoNome()"/>
+          </td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td>X</td>
+          <td  id="MENSAGEM_NOME" class="mensagem_erro" colspan="9"></td>
+        </tr>
+        <tr>
+          <td colspan="11" height="23px"></td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td class="input_name">IDADE</td>
+          <td  class="input" colspan="9">
+            <input type="text" name="CAMPO_IDADE" onblur="validarCampoIdade()"/> 
+          </td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td>X</td>
+          <td id="MENSAGEM_IDADE" class="mensagem_erro" colspan="9"></td>
+        </tr>
+        <tr>
+          <td colspan="11" height="23px"></td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td class="input_name">LOGIN</td>
+          <td class="input" colspan="9">
+            <input type="text" name="CAMPO_LOGIN" onblur="validarCampoLogin()"/> 
+          </td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td>X</td>
+          <td id="MENSAGEM_LOGIN" class="mensagem_erro" colspan="9"></td>
+        </tr>
+        <tr>
+          <td colspan="11" height="23px"></td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td class="input_name">SENHA</td>
+          <td class="input" colspan="9">
+            <input type="text" name="CAMPO_SENHA" onblur="validarCampoSenha()"/> 
+          </td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td>X</td>
+          <td id="MENSAGEM_SENHA" class="mensagem_erro" colspan="9"></td>
+        </tr>
+        <tr>
+          <td colspan="11" height="23px"></td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td class="input_name">STATUS</td>
+          <td class="input"  colspan="9">
+            <input type="text" name="CAMPO_STATUS" onblur="validarCampoStatus()"/> 
+          </td>
+        </tr>
+        <tr>
+          <td>X</td>
+          <td>X</td>
+          <td id="MENSAGEM_STATUS" class="mensagem_erro" colspan="9"></td>
+        </tr>
+        <tr>
+          <td class="texto_azul" colspan="11">O cadastro deu certo</td>
+        </tr>
+        <tr">
+          <td>X</td>
+          <td>X</td>
+          <td style="padding-left:25px; padding-right:25px">X</td>
+          <td style="padding-left:25px; padding-right:25px">LIMPAR</td>
+          <td>X</td>
+          <td colspan="2">CADASTRAR</td>
+          <td>X</td>
+          <td>X</td>
+          <td>X</td>
+        </tr>
+        <tr>
+          <td colspan="11">X</td>
+        </tr>
+        <tr>
+          <td class="fundo_verde" colspan="11">PESSOAS CADASTRADAS</td>
+        </tr>
+        <tr class="titulos_tabela">
+          <td>CÓDIGO</td>
+          <td colspan="3" width="500px">NOME</td>
+          <td>IDADE</td>
+          <td>LOGIN</td>
+          <td>SENHA</td>
+          <td style="padding-left:25px; padding-right:25px">STATUS</td>
+          <td>EDITAR</td>
+          <td>EXCLUIR</td>
+        </tr>
+        <tr class="maria">
+          <td>1</td>
+          <td colspan="3">MARIA ANDRADINA DE SOUZA</td>
+          <td>67</td>
+          <td>MEU_LOGIN</td>
+          <td>123</td>
+          <td>1 - ATIVO</td>
+          <td>EDITAR</td>
+          <td>EXCLUIR</td>
+        </tr>
+        <tr class="roberto">
+          <td>2</td>
+          <td colspan="3">ROBERTO FAVARO</td>
+          <td>18</td>
+          <td>ROBERTO.FAVARO</td>
+          <td>444</td>
+          <td>1 - ATIVO</td>
+          <td>EDITAR</td>
+          <td>EXCLUIR</td>
+        </tr>
+        <tr class="fundo_azul">
+          <td   id="ultima_linha" class="fundo_laranja"  colspan="11">
+            DEVE ALTERAR A COR QUANDO O MOUSE ESTIVER SOBRE A PRIMEIRA OU SOBRE
+            A ÚLTIMA
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
