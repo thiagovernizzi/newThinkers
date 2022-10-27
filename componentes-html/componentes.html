@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Aprendendo Componentes do HTML</title>
+        <script type="text/javascript">
+            function mostrarOQueFoiSelecionado()
+            {
+                var texto = 'Você selecionou: ';
+                var alimentosSelecionados = document.form.CAMPO_ALIMENTOS;
+                var posicao = 0;
+                while(alimentosSelecionados.length > posicao) 
+                {
+                    var campoAtual = alimentosSelecionados[posicao];
+                    if(campoAtual.checked == true) {
+                        var nomeAlimentoAtual = campoAtual.value;
+                        texto = texto + nomeAlimentoAtual + ",";
+                    }
+                    posicao = posicao + 1;
+                }
+                document.getElementById('MENSAGEM').innerHTML = texto;
+            }
+        </script>
+        <style>
+        </style>
+    </head>
+    <body>
+        <form name="form">
+            <table border="1" width="600px">
+                <div>
+                    <fieldset>
+                        <legend>Escolha o que você quer comer</legend>
+                        <div>
+                            <input type="checkbox" name="CAMPO_ALIMENTOS" value="FEIJÃO"/>
+                            <label>Feijão</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="CAMPO_ALIMENTOS" value="ARROZ"/>
+                            <label>Arroz</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="CAMPO_ALIMENTOS" value="CARNE"/>
+                            <label>Carne</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="CAMPO_ALIMENTOS" value="MACARRÃO"/>
+                            <label>Macarrão</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div>
+                    <input type="button" onclick="mostrarOQueFoiSelecionado()" value="MOSTRAR O QUE FOI SELECIONADO"/>
+                </div>
+                <tr>
+                    <td id="MENSAGEM">A NOSSA LISTA ESTÁ VAZIA</td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
