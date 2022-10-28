@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Aprendendo Componentes do HTML</title>
+        <script type="text/javascript">
+            function mostrarOQueFoiSelecionado()
+            {
+                var texto = 'Você selecionou: ';
+                var alimentosSelecionados = document.form.CAMPO_ALIMENTOS;
+                var posicao = 0;
+                while(alimentosSelecionados.length > posicao) //REPETE ENQUANTO A CONDIÇÃO FOR VERDADEIRA (CONDIÇÃO)
+                {
+                    var campoAtual = alimentosSelecionados[posicao];
+                    if(campoAtual.checked == true) //EXECUTA O CORPO SE A CONDIÇÃO FOR VERDADEIRA (CONDIÇÃO)
+                    {
+                        var nomeAlimentoAtual = campoAtual.value;
+                        texto = texto + nomeAlimentoAtual + ",";
+                    }
+                    posicao = posicao + 1;
+                }
+                document.getElementById('MENSAGEM').innerHTML = texto;
+            }
+        </script>
+        <style>
+        </style>
+    </head>
+    <body>
+        <form name="form">
+            <table border="1" width="600px">
+                <div>
+                    <fieldset>
+                        <legend>Escolha um Estado</legend>
+                        <div>
+                            <label>UF</label>
+                            <select name="CAMPO_UF">
+                                <option value="SP">SÃO PAULO</option>
+                                <option value="MG" selected="selected">SÃO PAULO</option>
+                                <option value="RJ">RIO DE JANEIRO</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                </div>
+                <tr>
+                    <td id="MENSAGEM">NENHUM ESTADO FOI SELECIONADO</td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
