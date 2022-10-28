@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Aprendendo componentes</title>
+    </head>
+    <body>
+        <form name="form">
+            <table border="1" width="600px">
+                <tr>
+                    <td colspan="5">SPINNER - SELECT MÚLTIPLO</td>
+                </tr>
+                <tr>
+                    <td align="right">Selecione sua comida</td>
+                    <td colspan="4" title="Utilize o Ctrl para selecionar mais de um elemento.">
+                        <select size="8" multiple="multiple" name="CAMPO_SELECT_COMIDA">
+                            <option value="ARROZ">ARROZ</option>
+                            <option value="FEIJÃO">FEIJÃO</option>
+                            <option value="MACARRÃO">MACARRÃO</option>
+                            <option value="CARNE">CARNE</option>
+                            <option value="LASANHA">LASANHA</option>
+                            <option value="PIZZA">PIZZA</option>
+                            <option value="MIOJO">MIOJO</option>
+                            <option value="CAMARÃO">CAMARÃO</option>
+                            <option value="SALADA">SALADA</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">CAMPO OCULTO - HIDDEN</td>
+                </tr>
+                <tr>
+                    <td>HIDDEN</td>
+                    <td>
+                        <input type="hidden" value="UM TEXTO QUE EU QUERO GUARDAR, MAS NÃO EXIBO" name="CAMPO_OCULTO">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">DESABILITADO - Você não altera nem lê estes dados</td>
+                </tr>
+                <tr>
+                    <td>DISABLED</td>
+                    <td>
+                        <input type="text" disabled="disabled" value="UM TEXTO QUE EU NÃO CONSIGO LER" name="CAMPO_DESABILITADO">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">SOMENTE LEITURA - Você não altera, MAS lê estes dados</td>
+                </tr>
+                <tr>
+                    <td>READONLY</td>
+                    <td>
+                        <input type="text" readonly="readonly" value="UM TEXTO QUE EU NÃO CONSIGO ALTERAR" name="CAMPO_SOMENTE_LEITURA">
+                    </td>
+                </tr>
+                <tr>
+                    <td>RADIO - SELEÇÃO ÚNICA</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text">
+                    </td>
+                    <td>
+                        <input type="text" readonly="readonly" value="UM TEXTO QUE EU NÃO CONSIGO ALTERAR" name="CAMPO_SOMENTE_LEITURA">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
