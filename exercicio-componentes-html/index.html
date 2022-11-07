@@ -1,0 +1,193 @@
+<html>
+  <head>
+    <title>Componentes HTML</title>
+    <script type="text/javascript">
+      function validarCombobox() {
+        if (document.form.CAMPO_SELECT_CURSOS != selected) {
+          document.getElementsByName("CAMPO_SELECT_CURSOS").innerHTML ="Por favor, selecione uma opção";
+          return false;
+        } else {
+          document.getElementsByName("CAMPO_SELECT_CURSOS").innerHTML = "";
+          return true;
+        }
+      }
+
+      function validarCampoTextArea() {
+        function countText() {
+  let text = document.form.CAMPO_TEXT_AREA.value;
+  document.getElementById('characters').innerText = text.length;
+      }
+    </script>
+  </head>
+  <body>
+    <h3 style="text-align: center">Compontentes HTML</h3>
+    <form
+      name="form"
+      style="display: flex; flex-direction: row; justify-content: center"
+    >
+      <table border="1" width="800px">
+        <tr>
+          <td colspan="2">COMBOBOX</td>
+          <td colspan="7">
+            <select size="1" name="CAMPO_SELECT_CURSOS">
+              <option selected disabled value="SELECT">------ SELECT ------</option>
+              <option value="HTML">HTML</option>
+              <option value="CSS">CSS</option>
+              <option value="JAVASCRIPT">JAVASCRIPT</option>
+              <option value="BANCO DE DADOS">BANCO DE DADOS</option>
+              <option value="DESIGN">DESIGN</option>
+              <option value="UX/UI">UX/UI</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="9" align="right" onclick="validarCombobox()"></td>
+        </tr>
+        <tr>
+          <td colspan="9" align="left">RADIO BUTTON</td>
+        </tr>
+        <tr>
+          <td colspan="9">
+            <input type="radio" name="CAMPO_OPINIÃO" />EXCELENTE
+          </td>
+        </tr>
+        <tr>
+          <td colspan="9"><input type="radio" name="CAMPO_OPINIÃO" />BOM</td>
+        </tr>
+        <tr>
+          <td colspan="9">
+            <input type="radio" name="CAMPO_OPINIÃO" />REGULAR
+          </td>
+        </tr>
+        <tr>
+          <td colspan="9"><input type="radio" name="CAMPO_OPINIÃO" />RUIM</td>
+        </tr>
+        <tr>
+          <td colspan="9">
+            <input type="radio" name="CAMPO_OPINIÃO" />PÉSSIMO
+          </td>
+        </tr>
+        <tr>
+          <td colspan="9" align="right">Selecione uma opção do radio button</td>
+        </tr>
+        <tr>
+          <td colspan="9">CHECKBOX</td>
+        </tr>
+        <tr>
+          <td colspan="9">
+            <input type="checkbox" name="CAMPO_COMIDAS" />Selecionar todos
+          </td>
+        </tr>
+        <tr>
+          <td colspan="9">
+            <input type="checkbox" name="CAMPO_COMIDAS" />Arroz
+          </td>
+        </tr>
+        <tr>
+          <td colspan="9">
+            <input type="checkbox" name="CAMPO_COMIDAS" />Feijão
+          </td>
+        </tr>
+        <tr>
+          <td colspan="9">
+            <input type="checkbox" name="CAMPO_COMIDAS" />Macarrão
+          </td>
+        </tr>
+        <tr>
+          <td colspan="9">
+            <input type="checkbox" name="CAMPO_COMIDAS" />Carne
+          </td>
+        </tr>
+        <tr>
+          <td colspan="9">
+            <input type="checkbox" name="CAMPO_COMIDAS" />Lagosta
+          </td>
+        </tr>
+        <tr>
+          <td colspan="9" align="right">Selecione uma opção do checkbox</td>
+        </tr>
+        <tr>
+          <td colspan="2">CAMPO SEM ESPAÇO</td>
+          <td colspan="7">
+            SE O USUÁRIO DIGITAR UM TEXTO COM MUITO ESPAÇO, RETIRE
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">HIDDEN</td>
+          <td colspan="7">
+            <input type="hidden" value="OCULTO" name="CAMPO_OCULTO" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">SOMENTE LEITURA</td>
+          <td colspan="7">
+            <input
+              style="width: 100%"
+              type="text"
+              readonly="readonly"
+              value="CAMPO QUE O USUÁRIO NÃO CONSEGUE ALTERAR O VALOR"
+              name="CAMPO_SOMENTE_LEITURA"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">CAMPO DESABILITADO</td>
+          <td colspan="7">
+            <input
+              style="width: 100%"
+              type="text"
+              disabled="disabled"
+              value="CAMPO DESABILITADO, O USUÁRIO TAMBÉM NÃO ALTERA O VALOR"
+              name="CAMPO_DESABILITADO"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="9" style="height: 21px"></td>
+        </tr>
+        <tr>
+          <td colspan="9">TEXT AREA</td>
+        </tr>
+        <tr>
+          <td colspan="2" id="TEXT_AREA" name="CAMPO_TEXT_AREA" onblur="validarCampoTextArea()"></td>
+          <td colspan="6">
+            <textarea cols="50" rows="10">
+Texto apresentado para o usuário</textarea
+            >
+          </td>
+          <td colspan="1">0/200</td>
+        </tr>
+        <tr>
+          <td colspan="9" align="right">Informe algum texto no text area</td>
+        </tr>
+        <tr>
+          <td colspan="9" style="height: 21px"></td>
+        </tr>
+        <tr>
+          <td colspan="3" align="center">SELECIONE VÁRIOS</td>
+          <td
+            colspan="4"
+            title="Utilize o Ctrl para selecionar mais de um elemento."
+          >
+            <select
+              style="width: 300px"
+              size="5"
+              multiple="multiple"
+              name="CAMPO_SELECT_COMIDA"
+            >
+              <option value="ARROZ">ARROZ</option>
+              <option value="FEIJÃO">FEIJÃO</option>
+              <option value="MACARRÃO">MACARRÃO</option>
+              <option value="CARNE">CAMARÃO</option>
+              <option value="LASANHA">LAGOSTA</option>
+              <option value="PIZZA">PIZZA</option>
+              <option value="MIOJO">MIOJO</option>
+              <option value="SALADA">SALADA</option>
+            </select>
+          </td>
+          <td colspan="2">Selecionados:</td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
