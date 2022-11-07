@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>Aprendendo tabelas</title>
+        <script type="text/javascript">
+            function validarCampoLogin() {
+                if(document.form.CAMPO_LOGIN.value == '') {
+                    document.getElementById('MENSAGEM_LOGIN').innerHTML = "Por favor, informe o login";
+                    return false
+                } else {
+                    document.getElementById('MENSAGEM_LOGIN').innerHTML = "";
+                    return true
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <form name="form">
+            <table border="1" width="600px">
+                <tr>
+                    <td rowspan="14">PRIMEIRO</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td>X</td>
+                    <td rowspan="14">ÚLTIMO</td>
+                </tr>
+                <tr>
+                    <td colspan="10">FAÇA AQUI O SEU LOGIN</td>
+                </tr>
+                <tr>
+                    <td colspan="10">X</td>
+                </tr>
+                <tr>
+                    <td>LOGIN</td>
+                    <td colspan="9">
+                            <input type="text" name="CAMPO_LOGIN" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>X</td>
+                    <td colspan="9" id="MENSAGEM_LOGIN"></td>
+                </tr>
+                <tr>
+                    <td colspan="10">X</td>
+                </tr>
+                <tr>
+                    <td>SENHA</td>
+                    <td colspan="9">
+                        <input type="password" name="CAMPO_SENHA" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>X</td>
+                    <td colspan="9">Preencha o campo senha</td>
+                </tr>
+                <tr>
+                    <td colspan="10">X</td>
+                </tr>
+                <tr>
+                    <td colspan="10">Seu login deu certo</td>
+                </tr>
+                <tr>
+                    <td colspan="10">X</td>
+                </tr>
+                <tr>
+                    <td>X</td>
+                    <td>X</td>
+                    <td colspan="2">
+                        <input type="button" value="LIMPAR" />
+                    </td>
+                    <td>X</td>
+                    <td colspan="2">
+                        <input type="button" value="FAZER LOGIN" onchange="validarCampoLogin()" />
+                    </td>
+                <td>X</td>
+                <td>X</td>
+                <td>X</td>
+                <tr>
+                    <td colspan="10">X</td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
